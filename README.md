@@ -75,7 +75,7 @@ Powered by **FastAPI**, the backend acts as the silent gatekeeper.
 | **Auth/DB** | **Firebase** | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white) | Real-time State Orchestration |
 | **Styling** | **Tailwind** | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | Security Terminal UI Design |
 | **Scripting** | **Python** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | Logic & Background Cleanup |
-| **Environment** | Node.js | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) |
+| **Environment** | Node.js | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) |Runtime environment for the React-based Control Plane |
 </div>
 
 ---
