@@ -3,10 +3,12 @@
 # 🌌 SHADOW GATEWAY: GHOST PROTOCOL
 ### **Autonomous API Stealth • Software-Defined Air-Gap • Temporal Security**
 
-[![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-VIEW-00FF41?style=for-the-badge&logo=target)](https://github.com/)
-[![Philosophy](https://img.shields.io/badge/PHILOSOPHY-READ-0078D4?style=for-the-badge&logo=google-cloud)](https://github.com/)
-[![Stack](https://img.shields.io/badge/STACK-ENFORCEMENT-white?style=for-the-badge&logo=python)](https://github.com/)
-[![Deploy](https://img.shields.io/badge/DEPLOY-EXECUTE-red?style=for-the-badge&logo=appveyor)](https://github.com/)
+<br />
+
+[![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-VIEW-00FF41?style=for-the-badge&logo=target)](#-system-infrastructure)
+[![Philosophy](https://img.shields.io/badge/PHILOSOPHY-READ-0078D4?style=for-the-badge&logo=google-cloud)](#-security-philosophies)
+[![Stack](https://img.shields.io/badge/STACK-ENFORCEMENT-white?style=for-the-badge&logo=python)](#-tech-stack)
+[![Deploy](https://img.shields.io/badge/DEPLOY-EXECUTE-red?style=for-the-badge&logo=appveyor)](#-setup--deployment)
 
 ---
 
