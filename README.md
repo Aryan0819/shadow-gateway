@@ -9,13 +9,16 @@
 
 ---
 
+**[ INFRASTRUCTURE ]** &nbsp; • &nbsp; **[ PHILOSOPHY ]** &nbsp; • &nbsp; **[ STACK ]** &nbsp; • &nbsp; **[ DEPLOY ]**
+
+---
+
 ### ⌈ SYSTEM MANIFEST ⌋
 **Shadow Gateway** is a high-assurance security infrastructure that enforces a **Ghost State** on backend services. By utilizing mimetic middleware, the infrastructure remains invisible to the public internet—returning a `404 Not Found` to all unauthorized traffic—until it is "Summoned" via a secure Control Plane.
 
-[Explore Architecture](#-system-infrastructure) • [Security Philosophies](#-security-philosophies) • [Setup](#-setup--deployment)
+</div>
 
 ---
-</div>
 
 ## 👥 THE ENGINEERING TEAM
 <div align="center">
@@ -33,7 +36,10 @@
 ## 🏗️ SYSTEM INFRASTRUCTURE
 The system operates on a dual-plane architecture designed to decouple **Identity Verification** from **Resource Access**.
 
+
+
 [Image of zero trust network architecture]
+
 
 ### 🛰️ The Control Plane (Frontend)
 The "Summoning" portal is a high-fidelity command center built with **React.js** and **Tailwind CSS**.
