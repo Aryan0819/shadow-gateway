@@ -36,6 +36,10 @@
 The system operates on a dual-plane architecture designed to decouple **Identity Verification** from **Resource Access**.
 
 
+
+[Image of zero trust network architecture]
+
+
 ### 🛰️ The Control Plane (Frontend)
 The "Summoning" portal is a high-fidelity command center built with **React.js** and **Tailwind CSS**.
 * **Identity Provisioning:** Validates developer credentials via Firebase Auth.
@@ -64,13 +68,14 @@ Powered by **FastAPI**, the backend acts as the silent gatekeeper.
 
 <div align="center">
 
-| Component | Tech | Logo |
-| :--- | :--- | :--- |
-| **Backend** | FastAPI | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white) |
-| **Frontend** | React | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) |
-| **Auth/DB** | Firebase | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white) |
-| **Styling** | Tailwind | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) |
-
+| Component | Tech | Logo | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Backend** | **FastAPI** | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white) | Asynchronous Enforcement Engine |
+| **Frontend** | **React** | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) | Control Plane Dashboard |
+| **Auth/DB** | **Firebase** | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white) | Real-time State Orchestration |
+| **Styling** | **Tailwind** | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) | Security Terminal UI Design |
+| **Scripting** | **Python** | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) | Logic & Background Cleanup |
+| **Environment** | Node.js | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) |
 </div>
 
 ---
