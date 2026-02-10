@@ -1,18 +1,18 @@
 <div align="center">
 
 # 🌌 SHADOW GATEWAY: GHOST PROTOCOL
-### *The Software-Defined Air-Gap for Autonomous API Security*
+### **Autonomous API Stealth • Software-Defined Air-Gap • Temporal Security**
 
-![Operational](https://img.shields.io/badge/NETWORK-STEALTH_ACTIVE-00FF41?style=for-the-badge&logo=shippable&logoColor=00FF41)
-![JIT](https://img.shields.io/badge/ACCESS-JIT_TEMPORAL-0078D4?style=for-the-badge&logo=data-bricks&logoColor=white)
-![Zero Trust](https://img.shields.io/badge/ARCHITECTURE-ZERO_TRUST-white?style=for-the-badge&logo=target&logoColor=black)
+![Network Stealth](https://img.shields.io/badge/NETWORK-STEALTH_ACTIVE-00FF41?style=for-the-badge&logo=opsgenie&logoColor=00FF41)
+![JIT Access](https://img.shields.io/badge/ACCESS-JIT_TEMPORAL-0078D4?style=for-the-badge&logo=clockify&logoColor=white)
+![Zero Trust](https://img.shields.io/badge/MODEL-ZERO_TRUST-white?style=for-the-badge&logo=postman&logoColor=black)
 
 ---
 
-### 「 PROTOCOL OVERVIEW 」
-**Shadow Gateway** transforms static backend infrastructure into a **Ghost State**. By leveraging custom stealth middleware, the system mimics a non-existent server—returning a **404 Not Found** to the public web—until it is "Summoned" via a cryptographically secure control plane.
+### ⌈ SYSTEM MANIFEST ⌋
+**Shadow Gateway** is a high-assurance security infrastructure that enforces a **Ghost State** on backend services. By utilizing mimetic middleware, the infrastructure remains invisible to the public internet—returning a `404 Not Found` to all unauthorized traffic—until it is "Summoned" via a cryptographically secure Control Plane.
 
-[View Documentation](#-system-architecture) • [Security Philosophy](#-security-philosophies) • [Deployment](#-setup-requirements)
+[Explore Architecture](#-system-architecture) • [Security Philosophies](#-security-philosophies) • [Deployment](#-setup-requirements)
 
 ---
 </div>
@@ -20,7 +20,7 @@
 ## 👥 THE ENGINEERING TEAM
 <div align="center">
 
-| | Developer | Identity |
+| | Contributor | Network Identity |
 | :--- | :--- | :--- |
 | 🛡️ | **Aryan** | [@aryan200420](https://github.com/aryan200420) |
 | ⚡ | **Adya Priyam** | [@Adya-Priyam](https://github.com/Adya-Priyam) |
@@ -31,54 +31,59 @@
 ---
 
 ## 🏗️ SYSTEM ARCHITECTURE
+The system operates on a dual-plane architecture designed to decouple **Identity Verification** from **Resource Access**.
+
 
 
 [Image of zero trust network architecture]
 
 
 ### 🛰️ The Control Plane (Frontend)
-The gateway is managed via a **High-Fidelity Command Center** built with **React.js** and **Tailwind CSS**. It provides:
-* **Temporal Dashboards:** Real-time countdowns for the JIT access window.
-* **Identity Provisioning:** Secure authentication via Firebase Auth.
-* **The Ritual:** A single-action trigger to manifest the API bridge for the user's specific IP.
+The "Summoning" portal is a high-fidelity command center built with **React.js** and **Tailwind CSS**.
+* **Identity Provisioning:** Validates developer credentials via Firebase Auth.
+* **Temporal Dashboards:** Real-time countdowns for active JIT access windows.
+* **Manifestation Trigger:** On-demand IP whitelisting with instantaneous global propagation.
 
 ### 🌑 The Enforcement Layer (Backend)
-The core engine is powered by **FastAPI** (Python), implementing:
-* **Mimetic Middleware:** Custom logic that masks the server signature.
-* **Temporal Bridges:** Background threads that automatically collapse authorized sessions after 30 minutes.
-* **State Sync:** Real-time IP-whitelisting via **Firebase RTDB**.
-
----
-
-## 🛠️ THE TECH STACK
-| Tier | Technology | Utility |
-| :--- | :--- | :--- |
-| **Enforcement** | `FastAPI` | Asynchronous high-speed request filtering. |
-| **Orchestration** | `Firebase Admin SDK` | Real-time state synchronization & Auth. |
-| **Visuals** | `Tailwind CSS` | Terminal-themed UI development. |
-| **Logic** | `Python 3.12+` | Background temporal window management. |
-| **Interface** | `React.js` | Interactive secure control plane. |
+Powered by **FastAPI**, the backend acts as the silent gatekeeper.
+* **Stealth Middleware:** Intercepts traffic at the edge. Unauthorized packets receive a `404` to prevent server footprinting.
+* **Just-In-Time (JIT) Bridge:** A 30-minute temporal window that automatically collapses via background cleanup threads.
+* **State Synchronization:** Real-time integration with **Firebase RTDB** for sub-second security updates.
 
 ---
 
 ## 🛡️ SECURITY PHILOSOPHIES
 
-> [!IMPORTANT]  
-> **Mimetic Obscurity:** Standard firewalls return a `403 Forbidden`, leaking that a resource exists. Shadow Gateway returns a **404**, neutralizing reconnaissance tools and port scanners.
+> [!IMPORTANT]
+> **MIMETIC OBSCURITY:** Traditional firewalls return a `403 Forbidden`, leaking that a resource exists but is protected. Shadow Gateway returns a **standard 404**, making the server appear non-existent to automated reconnaissance tools.
 
-> [!TIP]
-> **Temporal Decay:** Access is not a state; it is a lease. The JIT window ensures that even a compromised identity has a finite, 30-minute window before the bridge is purged.
+> [!CAUTION]
+> **TEMPORAL DECAY:** Access is a lease, not a permanent state. The JIT window ensures that even if a developer's machine is compromised, the window of vulnerability is limited to the 30-minute bridge duration.
 
 ---
 
-## ⚡ SETUP REQUIREMENTS
+## 🛠️ TECH STACK
+
+| COMPONENT | TECHNOLOGY | ROLE |
+| :--- | :--- | :--- |
+| **Enforcement** | `Python / FastAPI` | Asynchronous high-speed request filtering. |
+| **Control Plane** | `React / Tailwind` | Interactive secure dashboard & state tracking. |
+| **Orchestration** | `Firebase Admin` | Real-time state persistence & Auth. |
+| **Persistence** | `Firebase RTDB` | Global IP-whitelisting synchronization. |
+
+---
+
+## ⚡ SETUP & DEPLOYMENT
+
+### 1️⃣ Environment Configuration
+Ensure `serviceAccountKey.json` is present in the root directory and your Firebase Realtime Database rules are set to `auth != null`.
+
+### 2️⃣ Service Initialization
 ```bash
-# 1. Clone & Initialize
-git clone [https://github.com/your-repo/shadow-gateway.git](https://github.com/your-repo/shadow-gateway.git)
+# Initialize Backend Enforcement
+cd backend && pip install -r requirements.txt
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 
-# 2. Configure Environment
-# Place serviceAccountKey.json in /backend
-# Update firebaseConfig.js in /frontend
-
-# 3. Secure Launch
-cd backend && uvicorn main:app --host 0.0.0.0 --port 8000
+# Launch Control Plane
+cd frontend && npm install
+npm start
