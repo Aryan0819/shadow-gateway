@@ -1,73 +1,89 @@
 <div align="center">
 
 # 🛡️ SHADOW GATEWAY: GHOST PROTOCOL
-### **A Software-Defined Air-Gap for Autonomous API Security**
+### **Autonomous API Stealth & Temporal Access Infrastructure**
 
-[![Status](https://img.shields.io/badge/Status-Operational-emerald?style=for-the-badge&logo=opsgenie)](https://github.com/)
-[![JIT](https://img.shields.io/badge/Access-JIT--Temporal-blue?style=for-the-badge&logo=python)](https://github.com/)
-[![Zero Trust](https://img.shields.io/badge/Model-Zero--Trust-black?style=for-the-badge&logo=google-cloud)](https://github.com/)
-
----
-
-### 🌌 Overview
-**Shadow Gateway** is a security infrastructure that enforces a **Ghost State** on backend services. By default, the server remains invisible to the public internet—returning a `404 Not Found` to all unauthorized traffic—until it is "Summoned" via a secure control plane.
-
-</div>
-
----
-
-## 👥 Developers
-* **Aryan** ([@aryan200420](https://github.com/aryan200420))
-* **Adya Priyam** ([@Adya-Priyam](https://github.com/Adya-Priyam))
-* **Raj Lakshmi** ([@RajLakshmi-23](https://github.com/RajLakshmi-23))
-
----
-
-## 🛡️ Security Philosophies
+![Status](https://img.shields.io/badge/STATUS-OPERATIONAL-00FF41?style=for-the-badge&logo=statuspage&logoColor=00FF41)
+![Security](https://img.shields.io/badge/SECURITY-ZERO--TRUST-black?style=for-the-badge&logo=google-cloud&logoColor=white)
+![Framework](https://img.shields.io/badge/FRAMEWORK-FASTAPI-05998b?style=for-the-badge&logo=fastapi&logoColor=white)
 
 
 
 [Image of zero trust network architecture]
 
 
-* **Mimetic Obscurity:** Unlike traditional firewalls that return a `403 Forbidden` (confirming a resource exists but is blocked), Shadow Gateway returns a `404 Not Found`. The server mimics a non-existent endpoint to prevent footprinting and reconnaissance.
-* **Temporal Access (JIT):** Access is a lease, not a right. The 30-minute **Just-In-Time (JIT)** window automatically collapses, minimizing the window of vulnerability.
-* **Zero-Trust Enforcement:** No IP is trusted by default. Every request is validated in real-time against the synchronized state in the global control plane.
-* **Stealth Middleware:** A custom logic layer that sits at the very edge of the application, dropping unauthorized packets before they touch any business logic.
+---
+
+### 🌌 Project Essence
+**Shadow Gateway** is not just a firewall; it is a **Software-Defined Air-Gap**. 
+It enforces a **Ghost State** on backend services, ensuring that unauthorized traffic receives a `404 Not Found`—mimicking a non-existent server—effectively eliminating the attack surface for reconnaissance.
+
+[Explore the Protocol](#-security-philosophies) • [View Tech Stack](#-tech-stack) • [Setup](#-setup-requirements)
+
+---
+
+</div>
+
+## 👥 Engineering Team
+| Developer | GitHub Profile |
+| :--- | :--- |
+| **Aryan** | [@aryan200420](https://github.com/aryan200420) |
+| **Adya Priyam** | [@Adya-Priyam](https://github.com/Adya-Priyam) |
+| **Raj Lakshmi** | [@RajLakshmi-23](https://github.com/RajLakshmi-23) |
+
+---
+
+## 🛡️ Security Philosophies
+
+### 🌑 Mimetic Obscurity
+Traditional security returns `403 Forbidden`, which confirms a target's existence. Shadow Gateway returns a **standard 404**, making the infrastructure invisible to automated scanners and brute-force scripts.
+
+### ⏳ Temporal Access (JIT)
+Access is a lease, not a right. The **Just-In-Time (JIT)** bridge manifests for exactly 30 minutes. Once the TTL expires, the background cleanup threads collapse the bridge, returning the system to its ghost state.
+
+### 🧊 Zero-Trust Enforcement
+Every packet is treated as hostile. Real-time synchronization between the **Control Plane** (React) and the **Enforcement Layer** (FastAPI) ensures that even authenticated users are strictly limited to their active session window.
+
+---
+
+## 🏗️ System Infrastructure
+
+| Component | Logic |
+| :--- | :--- |
+| **Stealth Layer** | Custom Python Middleware acting as the primary gatekeeper. |
+| **The Bridge** | Asynchronous background threads managing JIT state persistence. |
+| **Control Plane** | Firebase-backed React dashboard for "Summoning" the gateway. |
 
 ---
 
 ## 🛠️ Tech Stack
 
-### **Backend & Enforcement**
-* **Python (FastAPI):** High-performance asynchronous framework for the core enforcement engine.
-* **Uvicorn:** ASGI server implementation for lightning-fast request handling.
-* **Firebase Admin SDK:** Server-side communication with the global control plane.
+### **Backend Core**
+* **FastAPI:** Asynchronous engine for the Enforcement Layer.
+* **Firebase Admin:** Real-time state synchronization with the global registry.
+* **Uvicorn:** High-performance ASGI orchestration.
 
-### **Control Plane & Frontend**
-* **React.js:** Interactive "Summoning" dashboard and real-time state management.
-* **Tailwind CSS:** High-fidelity, "Security Terminal" themed UI.
-* **Lucide React:** Iconography for system status and security indicators.
+### **Frontend & UX**
+* **React.js & Tailwind CSS:** "Command Center" UI with real-time countdowns.
+* **Lucide Icons:** Minimalist, high-clarity security iconography.
 
-### **Infrastructure & Database**
-* **Firebase RTDB:** Real-time state orchestrator for instant IP syncing.
-* **Firebase Auth:** Secure developer identity verification.
-
----
-
-## 🏗️ System Infrastructure
-1.  **The Stealth Layer:** Custom middleware checking incoming headers/IPs against the Firebase RTDB.
-2.  **The JIT Bridge:** Backend background threads monitoring TTL (Time-to-Live) to purge expired access.
-3.  **The Control Plane:** A secure React app where developers manifest the gateway for their specific IP.
+### **Database & Auth**
+* **Firebase RTDB:** Global state management for instant IP whitelisting.
+* **Firebase Auth:** Multi-factor authentication for developer access.
 
 ---
 
 ## ⚡ Setup Requirements
-* **Firebase Service Account:** Requires a `serviceAccountKey.json` for backend access.
-* **Environment Config:** Frontend Firebase API keys and authorized Backend URL.
-* **CORS Lockdown:** Strict restriction to only accept requests from the authorized Control Plane domain.
+
+1. **Credentials:** Place `serviceAccountKey.json` in the `/backend` directory.
+2. **Configuration:** Update `firebaseConfig.js` with your Project ID and API Keys.
+3. **Lockdown:** Ensure CORS is strictly bound to your production frontend domain.
 
 ---
+
 <div align="center">
-  <sub>Built with precision for the next generation of API security.</sub>
+
+### **Protocol Manifested by the Ghost Team**
+*Designed for security. Built for stealth.*
+
 </div>
