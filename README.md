@@ -3,13 +3,10 @@
 # 🌌 SHADOW GATEWAY: GHOST PROTOCOL
 ### **Autonomous API Stealth • Software-Defined Air-Gap • Temporal Security**
 
-![Network Stealth](https://img.shields.io/badge/NETWORK-STEALTH_ACTIVE-00FF41?style=for-the-badge&logo=opsgenie&logoColor=00FF41)
-![JIT Access](https://img.shields.io/badge/ACCESS-JIT_TEMPORAL-0078D4?style=for-the-badge&logo=clockify&logoColor=white)
-![Zero Trust](https://img.shields.io/badge/MODEL-ZERO_TRUST-white?style=for-the-badge&logo=postman&logoColor=black)
-
----
-
-**[ INFRASTRUCTURE ]** &nbsp; • &nbsp; **[ PHILOSOPHY ]** &nbsp; • &nbsp; **[ STACK ]** &nbsp; • &nbsp; **[ DEPLOY ]**
+[![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-VIEW-00FF41?style=for-the-badge&logo=target)](https://github.com/)
+[![Philosophy](https://img.shields.io/badge/PHILOSOPHY-READ-0078D4?style=for-the-badge&logo=google-cloud)](https://github.com/)
+[![Stack](https://img.shields.io/badge/STACK-ENFORCEMENT-white?style=for-the-badge&logo=python)](https://github.com/)
+[![Deploy](https://img.shields.io/badge/DEPLOY-EXECUTE-red?style=for-the-badge&logo=appveyor)](https://github.com/)
 
 ---
 
@@ -35,10 +32,6 @@
 
 ## 🏗️ SYSTEM INFRASTRUCTURE
 The system operates on a dual-plane architecture designed to decouple **Identity Verification** from **Resource Access**.
-
-
-
-[Image of zero trust network architecture]
 
 
 ### 🛰️ The Control Plane (Frontend)
