@@ -17,59 +17,57 @@
 ---
 
 ## 👥 Developers
-**Aryan** • **Adya Priyam** • **Raj Lakshmi**
+* **Aryan** ([@aryan200420](https://github.com/aryan200420))
+* **Adya Priyam** ([@Adya-Priyam](https://github.com/Adya-Priyam))
+* **Raj Lakshmi** ([@RajLakshmi-23](https://github.com/RajLakshmi-23))
 
 ---
 
 ## 🛡️ Security Philosophies
-* **Mimetic Obscurity:** Unlike traditional firewalls that return a `403 Forbidden` (confirming the resource exists), Shadow Gateway returns a `404 Not Found`. The server mimics a non-existent endpoint to prevent footprinting and reconnaissance.
-* **Temporal Access (JIT):** Identity is verified, but access is finite. The 30-minute JIT (Just-In-Time) window automatically collapses, minimizing the window of vulnerability.
-* **Zero-Trust Enforcement:** Every request is validated in real-time against the authorized IP stored in the Firebase Control Plane.
-* **Cross-Origin Lockdown:** Strict CORS policies ensure the gateway is only controllable via authorized frontend origins.
-
----
-
-## 🏗️ System Infrastructure & Setup
 
 
 
 [Image of zero trust network architecture]
 
 
-### 1️⃣ Backend Setup (FastAPI & Firebase)
-The backend uses **Stealth Middleware** to intercept every request. If the requester's IP is not in the "Active" state in Firebase, the server ghosts the request.
+* **Mimetic Obscurity:** Unlike traditional firewalls that return a `403 Forbidden` (confirming a resource exists but is blocked), Shadow Gateway returns a `404 Not Found`. The server mimics a non-existent endpoint to prevent footprinting and reconnaissance.
+* **Temporal Access (JIT):** Access is a lease, not a right. The 30-minute **Just-In-Time (JIT)** window automatically collapses, minimizing the window of vulnerability.
+* **Zero-Trust Enforcement:** No IP is trusted by default. Every request is validated in real-time against the synchronized state in the global control plane.
+* **Stealth Middleware:** A custom logic layer that sits at the very edge of the application, dropping unauthorized packets before they touch any business logic.
 
-```python
-# Install: pip install fastapi uvicorn firebase-admin
-import time
-from fastapi import FastAPI, Request, status
-from fastapi.responses import JSONResponse
-from firebase_admin import credentials, db, initialize_app
+---
 
-app = FastAPI()
+## 🛠️ Tech Stack
 
-# 1. Initialize Firebase Control Plane
-cred = credentials.Certificate("serviceAccountKey.json")
-initialize_app(cred, {'databaseURL': 'YOUR_FIREBASE_RTDB_URL'})
+### **Backend & Enforcement**
+* **Python (FastAPI):** High-performance asynchronous framework for the core enforcement engine.
+* **Uvicorn:** ASGI server implementation for lightning-fast request handling.
+* **Firebase Admin SDK:** Server-side communication with the global control plane.
 
-# 2. Stealth Middleware (The Ghost Logic)
-@app.middleware("http")
-async def ghost_protocol_middleware(request: Request, call_next):
-    if request.url.path in ["/summon", "/docs"]:
-        return await call_next(request)
+### **Control Plane & Frontend**
+* **React.js:** Interactive "Summoning" dashboard and real-time state management.
+* **Tailwind CSS:** High-fidelity, "Security Terminal" themed UI.
+* **Lucide React:** Iconography for system status and security indicators.
 
-    ip_key = request.client.host.replace(".", "_")
-    auth_data = db.reference(f'authorized_ips/{ip_key}').get()
+### **Infrastructure & Database**
+* **Firebase RTDB:** Real-time state orchestrator for instant IP syncing.
+* **Firebase Auth:** Secure developer identity verification.
 
-    if not auth_data or time.time() > auth_data.get('expires_at', 0):
-        return JSONResponse(status_code=404, content={"detail": "Not Found"})
+---
 
-    return await call_next(request)
+## 🏗️ System Infrastructure
+1.  **The Stealth Layer:** Custom middleware checking incoming headers/IPs against the Firebase RTDB.
+2.  **The JIT Bridge:** Backend background threads monitoring TTL (Time-to-Live) to purge expired access.
+3.  **The Control Plane:** A secure React app where developers manifest the gateway for their specific IP.
 
-# 3. JIT Bridge (The Summoning Endpoint)
-@app.post("/summon")
-async def summon(request: Request):
-    ip_key = request.client.host.replace(".", "_")
-    expiry = time.time() + 1800 # 30 Minute Window
-    db.reference(f'authorized_ips/{ip_key}').set({"expires_at": expiry, "status": "active"})
-    return {"status": "Gateway Manifested", "window": "30m"}
+---
+
+## ⚡ Setup Requirements
+* **Firebase Service Account:** Requires a `serviceAccountKey.json` for backend access.
+* **Environment Config:** Frontend Firebase API keys and authorized Backend URL.
+* **CORS Lockdown:** Strict restriction to only accept requests from the authorized Control Plane domain.
+
+---
+<div align="center">
+  <sub>Built with precision for the next generation of API security.</sub>
+</div>
