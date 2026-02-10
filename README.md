@@ -5,10 +5,10 @@
 
 <br />
 
-[![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-VIEW-00FF41?style=for-the-badge&logo=target)](#-system-infrastructure)
-[![Philosophy](https://img.shields.io/badge/PHILOSOPHY-READ-0078D4?style=for-the-badge&logo=google-cloud)](#-security-philosophies)
-[![Stack](https://img.shields.io/badge/STACK-ENFORCEMENT-white?style=for-the-badge&logo=python)](#-tech-stack)
-[![Deploy](https://img.shields.io/badge/DEPLOY-EXECUTE-red?style=for-the-badge&logo=appveyor)](#-setup--deployment)
+[![Infrastructure](https://img.shields.io/badge/INFRASTRUCTURE-VIEW-00FF41?style=for-the-badge&logo=google-cloud&logoColor=white)](#-system-infrastructure)
+[![Philosophy](https://img.shields.io/badge/PHILOSOPHY-READ-0078D4?style=for-the-badge&logo=gitbook&logoColor=white)](#-security-philosophies)
+[![Stack](https://img.shields.io/badge/STACK-ENFORCEMENT-white?style=for-the-badge&logo=python&logoColor=3776AB)](#-tech-stack)
+[![Deploy](https://img.shields.io/badge/DEPLOY-EXECUTE-red?style=for-the-badge&logo=fastapi&logoColor=white)](#-setup--deployment)
 
 ---
 
@@ -62,12 +62,16 @@ Powered by **FastAPI**, the backend acts as the silent gatekeeper.
 
 ## 🛠️ TECH STACK
 
-| COMPONENT | TECHNOLOGY | ROLE |
+<div align="center">
+
+| Component | Tech | Logo |
 | :--- | :--- | :--- |
-| **Enforcement** | `Python / FastAPI` | Asynchronous high-speed request filtering. |
-| **Control Plane** | `React / Tailwind` | Interactive secure dashboard & state tracking. |
-| **Orchestration** | `Firebase Admin` | Real-time state persistence & Auth. |
-| **Persistence** | `Firebase RTDB` | Global IP-whitelisting synchronization. |
+| **Backend** | FastAPI | ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white) |
+| **Frontend** | React | ![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB) |
+| **Auth/DB** | Firebase | ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=flat&logo=Firebase&logoColor=white) |
+| **Styling** | Tailwind | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white) |
+
+</div>
 
 ---
 
