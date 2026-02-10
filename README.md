@@ -1,27 +1,54 @@
-2. The Control Plane (Frontend)
-Bash
-cd frontend
-npm install lucide-react
-npm start
-🛡️ Security Protocol Architecture
-Temporal Security: Access is limited not just by identity, but by time, minimizing the attack surface significantly.
-
-Zero-Trust: Every single request is validated against the real-time authorized IP stored in Firebase.
-
-Ghosting: No "Forbidden" headers are sent. The server mimics a non-existent endpoint to prevent footprinting.
-
 <div align="center">
 
-✨ Showcase your role as a Google Student Ambassador
+# 🛡️ SHADOW GATEWAY: GHOST PROTOCOL
+### **A Software-Defined Air-Gap for Autonomous API Security**
+
+[![Status](https://img.shields.io/badge/Status-Operational-emerald?style=for-the-badge&logo=opsgenie)](https://github.com/)
+[![JIT](https://img.shields.io/badge/Access-JIT--Temporal-blue?style=for-the-badge&logo=python)](https://github.com/)
+[![Zero Trust](https://img.shields.io/badge/Model-Zero--Trust-black?style=for-the-badge&logo=google-cloud)](https://github.com/)
+
+
+
 </div>
 
+---
 
------
+## 🌌 The Problem & The Solution
+Most backend servers are "always-on," leaving them exposed to constant scanning and brute-force attempts. **Shadow Gateway** solves this by enforcing a **Ghost State**. The server returns a `404 Not Found` to the entire internet until it is "Summoned" by an authorized developer.
 
-### Why this version stands out:
+### 🛠️ Core Infrastructure
+* **Stealth Middleware:** Custom Python logic that mimics a non-existent endpoint for unauthorized IPs.
+* **JIT (Just-In-Time) Bridge:** A 30-minute temporal access window that automatically collapses via background threads.
+* **Control Plane:** Real-time state synchronization via Firebase RTDB and Firebase Authentication.
 
-  * **Center Alignment:** The `<div>` tags make the header look much more like a professional landing page.
-  * **Feature Cards:** The Markdown table for features creates a clean, 3-column "card" look.
-  * **Interactive Feel:** Using Shields.io badges makes the repository look maintained and high-quality.
+---
 
-**Would you like me to help you create a specific "How it Works" section with a Mermaid.js diagram to show the IP-locking logic visually?**
+## 👥 The Engineering Team
+
+| <img src="https://github.com/identicons/aryan.png" width="100px;"/><br />**Aryan** | <img src="https://github.com/identicons/adya.png" width="100px;"/><br />**Adya Priyam** | <img src="https://github.com/identicons/raj.png" width="100px;"/><br />**Raj Lakshmi** |
+| :---: | :---: | :---: |
+| Lead Architect & GSA | Security Systems | Frontend Engineering |
+
+---
+
+## 🏗️ System Architecture
+
+| Tier | Technology | Contribution |
+| :--- | :--- | :--- |
+| **Control Plane** | React.js & Tailwind | Interactive Dashboard & Countdown |
+| **Enforcement** | FastAPI (Python) | IP-Whitelisting & Ghosting |
+| **Database** | Firebase RTDB | Cross-service state persistence |
+| **Authentication** | Firebase Auth | Secure Admin Identity Verification |
+
+
+
+---
+
+## ⚡ Deployment & Execution
+
+### 1. Initialize Backend
+```bash
+cd backend
+pip install fastapi uvicorn firebase-admin
+# Place 'serviceAccountKey.json' in this folder
+python main.py
