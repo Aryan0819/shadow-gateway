@@ -24,9 +24,9 @@
 
 | | Developer | GitHub Identity |
 | :--- | :--- | :--- |
-| 🛡️ | **Aryan** | [@aryan200420](https://github.com/aryan200420) |
-| ⚡ | **Adya Priyam** | [@Adya-Priyam](https://github.com/Adya-Priyam) |
-| 🕵️ | **Raj Lakshmi** | [@RajLakshmi-23](https://github.com/RajLakshmi-23) |
+| 🛡️ | **Aryan** | [@aryan200420](https://github.com/Aryan0819) |
+| ⚡ | **Adya Priyam** | [@Adya-Priyam](https://github.com/bluesky-adi) |
+| 🕵️ | **Raj Lakshmi** | [@RajLakshmi-23](https://github.com/Rajlakshmi-ai) |
 
 </div>
 
