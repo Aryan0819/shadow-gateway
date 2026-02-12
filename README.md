@@ -94,3 +94,20 @@ uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 # Launch Control Plane
 cd frontend && npm install
 npm start
+'''
+
+'''
+shadow-gateway/
+├── backend/
+│   ├── main.py                # FastAPI Enforcement & JIT Logic
+│   ├── requirements.txt       # Backend dependencies
+│   └── serviceAccountKey.json # Firebase Admin SDK Credentials
+├── frontend/
+│   ├── src/
+│   │   ├── App.js             # Control Plane Dashboard Logic
+│   │   ├── firebaseConfig.js  # Firebase Client Configuration
+│   │   └── index.css          # Tailwind & Global Styles
+│   ├── public/                # Static assets
+│   └── package.json           # Frontend dependencies
+└── README.md                  # System Manifest
+'''
