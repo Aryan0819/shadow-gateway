@@ -97,7 +97,9 @@ npm start
 ```
 
 
----
+## 📂 PROJECT ARCHITECTURE
+
+```text
 shadow-gateway/
 ├── backend/
 │   ├── main.py                # FastAPI Enforcement & JIT Logic
@@ -111,4 +113,3 @@ shadow-gateway/
 │   ├── public/                # Static assets
 │   └── package.json           # Frontend dependencies
 └── README.md                  # System Manifest
-'''
