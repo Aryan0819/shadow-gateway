@@ -96,7 +96,7 @@ cd frontend && npm install
 npm start
 '''
 
-'''
+---
 shadow-gateway/
 ├── backend/
 │   ├── main.py                # FastAPI Enforcement & JIT Logic
